@@ -72,3 +72,48 @@ c,e,f =e,f,c
 print(c)
 print(e)
 print(f)
+
+
+
+"""
+1 计算每个学生的总份、各科平均分，然后一并输出出来
+2 统计各科成绩的最低分、最高分、平均分，并输出
+3 查找成绩优秀（平均分大于90）的学生，并输出
+"""
+# 1 计算每个学生的总份、各科平均分，然后一并输出出来
+students =(
+    ("S001","王林",85,92,78),
+    ("S002","李沐婉",92,88,95),
+    ("S003","十三",78,85,82),
+    ("S004","曾牛",88,79,91),
+    ("S005","周铁",95,96,89),
+)
+print("学号 \t\t姓名 \t\t平均分 \t\t")
+#方式一
+# for i in students:
+#     total = i[2] + i[3] +i[4]
+#     avg = total / 3
+#     print(f"{i[0]} \t\t{i[1]} \t\t{avg:.1f}")
+# 方式二--->元组解包  先是students中一个元素（元组）抽出，再进行元组中元组的解包
+for num,name,chinese,math,english in students:
+    total = chinese + math + english
+    avg = total / 3
+    print(f"{num} \t\t{name} \t\t{avg:.1f}")
+
+print()
+# 2 统计各科成绩的最低分、最高分、平均分，并输出
+chinese_scores = [i[2] for i in students]
+math_scores = [i[3] for i in students]
+english_scores = [i[4] for i in students]
+print(f"语文最低分为{min(chinese_scores)}，最高分为{max(chinese_scores)},平均分为{sum(chinese_scores)/len(chinese_scores)}")
+print(f"数学最低分为{min(math_scores)}，最高分为{max(math_scores)},平均分为{sum(math_scores)/len(math_scores)}")
+print(f"英语最低分为{min(english_scores)}，最高分为{max(english_scores)},平均分为{sum(english_scores)/len(english_scores)}")
+print()
+
+# 3 查找成绩优秀（平均分大于90）的学生，并输出
+for num,name,chinese,math,english in students:
+    total = chinese + math + english
+    avg = total / 3
+    if avg > 90:
+        print(f"优秀学生有：{num} \t\t{name} \t\t{avg:.1f}")
+
