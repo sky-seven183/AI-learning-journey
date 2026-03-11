@@ -6,22 +6,22 @@
 # 查看：list[0]   修改：list[0] = "a"  删除 ：del list[0]   索引不能超出范围
 
 
-# #列表定义 --list
-# s = ["a",1,3,5,-1,"hello"]
-#
-# print(s)
-#
-# #获取
-# print(s[1])
-#
-# print(s[-5])
-#
-# #修改
-# s[1] = ("b")
-# print(s[1])
-#
-# #删除
-# del s[0]
+#列表定义 --list
+s = ["a",1,3,5,-1,"hello"]
+
+print()
+
+#获取
+print([1])
+
+print([-5])
+
+#修改
+[1] = ("b")
+print([1])
+
+#删除
+del[0]
 # print(s)
 
 
@@ -31,12 +31,12 @@
 # 不包含结束索引对应元素，（开始默认0，结束默认列表长度，步长默认1）
 
 #定义列表
-# s = ["A","V", "G", "K", "t", "Y"]
-#
+s = ["A","V", "G", "K", "t", "Y"]
+
 # #切片操作[开始索引：结束索引：步长]
-#
-# print(s[0:5:2])
-# print(type(s[0:5:2]))  #仍为列表
+
+print([0:5:2])
+print(type([0:5:2]))  #仍为列表
 
 # 简写
 # s[:5:1]
@@ -55,56 +55,56 @@
 # reserve()   反转列表元素  s.reverse()
 
 
-# #列表定义
-# s = [32,53,63,24,14,56,78]
-#
-# #追加元素
-# s.append(12)
-# print(s)
-#
-# #插入元素
-# s.insert(3,45)
-# print(s)
-#
-# #移除元素
-# s.remove(53)
-# print(s)
-#
-# #删除指定索引并返回
-# e= s.pop(4)
-# print(s)
-# print(e)
-#
-# #类型一致，排序
-# s.sort()
-# print(s)
-#
-# #反转
-# s.reverse()
-# print(s)
+#列表定义
+s = [32,53,63,24,14,56,78]
+
+#追加元素
+s.append(12)
+print()
+
+#插入元素
+s.insert(3,45)
+print()
+
+#移除元素
+s.remove(53)
+print()
+
+#删除指定索引并返回
+e= s.pop(4)
+print()
+print(e)
+
+#类型一致，排序
+s.sort()
+print()
+
+#反转
+s.reverse()
+print()
 
 
 
-# 案例1
-#定义列表，实现10个数的排序，输出其中的最小值、最大值和平均值
-# 1.定义列表
-# num_list = []
-#
-# #输入10个数字
-#
-# for i in range(10):
-#     num = int(input("请输入一个数字："))
-#     num_list.append(num)
-#
-# #进行排序
-#
-# num_list.sort()
-# print("排序后的数字列表为：",num_list)
-#
-# #输出最值，平均值    sum()函数求和，len()函数获取元素数量
-# print("最大值：",num_list[-1])
-# print("最小值：",num_list[0])
-# print("平均值：",sum(num_list)/len(num_list))
+案例1
+定义列表，实现10个数的排序，输出其中的最小值、最大值和平均值
+1.定义列表
+num_list = []
+
+#输入10个数字
+
+for i in range(10):
+    num = int(input("请输入一个数字："))
+    num_list.append(num)
+
+#进行排序
+
+num_list.sort()
+print("排序后的数字列表为：",num_list)
+
+#输出最值，平均值    sum()函数求和，len()函数获取元素数量
+print("最大值：",num_list[-1])
+print("最小值：",num_list[0])
+print("平均值：",sum(num_list)/len(num_list))
 
 
 #python数据统计中常用语句
@@ -114,48 +114,48 @@
 # len()  获取元素个数
 
 
-# 案例2
-# 合并两个列表中的元素，对合并的结果进行去重处理
+案例2
+合并两个列表中的元素，对合并的结果进行去重处理
 
-#定义列表
-# num_list1 = [1,24,53,65,78,45,98]
-# num_list2 = [2,34,54,66,45,67,23,99,47]
+定义列表
+num_list1 = [1,24,53,65,78,45,98]
+num_list2 = [2,34,54,66,45,67,23,99,47]
 
-# # 1.合并列表
-# # for i in num_list2:
-# #     num_list1.append(i)
-#
-# #简化合并
-# # num _list = num_list1+num_list2  (也可以)
-#
-# #解包：将列表这一类容器揭开成一个个独立元素
-# #组包:将多个值合并到一个容器
-# num_list = []
-# num_list = [*num_list1,*num_list2]
-#
-# print("合并后的列表为：",num_list1)
-#
-# #2去重复元素
-# new_list = []
-# for i in num_list1:
-#     # 判断new_list 中是否存在num元素
-#     if i not in new_list:  #in/not in   判断是否存在于列表中，存在True 不存在False
-#         new_list.append(i)
-#
-# new_list.sort()
-# print("去重复后的列表为：",new_list)
+1.合并列表
+for i in num_list2:
+    num_list1.append(i)
+
+#简化合并
+# num _list = num_list1+num_list2  (也可以)
+
+#解包：将列表这一类容器揭开成一个个独立元素
+#组包:将多个值合并到一个容器
+num_list = []
+num_list = [*num_list1,*num_list2]
+
+print("合并后的列表为：",num_list1)
+
+#2去重复元素
+new_list = []
+for i in num_list1:
+    # 判断new_list 中是否存在num元素
+    if i not in new_list:  #in/not in   判断是否存在于列表中，存在True 不存在False
+        new_list.append(i)
+
+new_list.sort()
+print("去重复后的列表为：",new_list)
 
 # # 案例3
 # # 方法一：
-# num_list1 = []
-# for i in range(1,21):
-#     num_list1.append(i ** 2)
-# print(num_list1)
+num_list1 = []
+for i in range(1,21):
+    num_list1.append(i ** 2)
+print(num_list1)
 #
 # # 方法二：
 # 列表推导式 ---> 按照一定规则快速生成一个列表的方法 -->  格式1：[要插入的值 for i in 列表/序列]
-# num_list2 = [i**2 for i in range(1,21)]
-# print(num_list2)
+num_list2 = [i**2 for i in range(1,21)]
+print(num_list2)
 
 
 # 案例四
@@ -164,5 +164,6 @@
 
 num_list = [1,3,5,2,34,67,24,63,23]
 new_list = [i**2 for i in num_list if i%2==0]
+
 
 print(new_list)
