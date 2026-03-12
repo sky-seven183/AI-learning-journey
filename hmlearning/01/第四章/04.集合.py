@@ -44,4 +44,45 @@ print(s2.difference(s3))
 print(s3.difference(s2))
 print(s2.union(s3))
 print(s2.intersection(s3))
+# 案例
+# 1 同时修法语和艺术的学生
+# 2 找出同修四门课的学生
+# 3 找出修了足球但没修篮球的学生
+# 4 统计每个人选修的数量
+# 足球
+football_set = {"a","b","c","d","e","f"}
+# 篮球
+basketball_set ={"a","b","c","d"}
+# 法语
+french_set ={"a","d","e",}
+# 艺术
+art_set = {"a","d","e","f"}
+# 方法一
+fa_set = french_set.intersection(art_set)
+print(f"同时修法语和艺术的学生有：{fa_set}")
+# 方法二
+fa_set = french_set & art_set
+print(f"同时修法语和艺术的学生有：{fa_set}")
+print()
+# 找出同修四门课的学生
+all_set = football_set & basketball_set & french_set & art_set
+print(f"找出同修四门课的学生有：{all_set}")
+print()
+# 找出修了足球但没修篮球的学生
+# 方法一
+fb_set = football_set.difference(basketball_set)
+print(f"修了足球但没修篮球的学生{fb_set}")
+# 方法二
+fb_set = football_set - basketball_set
+print(f"修了足球但没修篮球的学生{fb_set}")
+# 方法三 {要往集合中添加的数据 for s in set1 if 条件}
+fb_set = {i for i in football_set if i not in basketball_set}
+print(f"修了足球但没修篮球的学生{fb_set}")
+print()
+# 4 统计每个人选修的数量
+all_set = football_set|basketball_set|french_set|art_set
+print(f"名单为{all_set}")
+all_list = [*football_set,*basketball_set,*french_set,*art_set]
+for i in all_set:    # 获取名单，从而在list 中遍历
+    print(f"{i}选了{all_list.count(i)}门课")
 
