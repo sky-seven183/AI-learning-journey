@@ -82,6 +82,7 @@ while True:
                 continue
 
             case 4:
+                    #用 info 存子字典
                 stu_name = input("请输入要查询的学生姓名：")
                 if stu_name not in students:
                     print(" 学生信息不存在！")
@@ -108,6 +109,7 @@ while True:
                     continue
 
                 # 修正4：正确提取各科成绩列表
+                # 列表推导式  快速实现遍历，以实现需要值的获取
                 chinese_scores = [students[s]["chinese"] for s in students]
                 math_scores = [students[s]["math"] for s in students]
                 english_scores = [students[s]["english"] for s in students]
