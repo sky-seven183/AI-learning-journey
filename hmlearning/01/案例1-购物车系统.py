@@ -55,6 +55,7 @@ while True:
         case 4:
             # 4.查询购物车
             for goods_name in goods.keys():
+                #字典与子字典的关系  good_meg获取子字典，然后输出子字典信息
                 goods_meg = goods[goods_name]
                 print(f"商品名称：{goods_name},商品价格：{goods_meg['price']},商品数量:{goods_meg['num']}")
         case 5:
