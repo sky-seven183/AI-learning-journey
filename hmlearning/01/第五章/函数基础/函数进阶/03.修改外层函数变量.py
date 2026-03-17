@@ -10,7 +10,7 @@ def func_out(data):
     def func_in():
         # 这个num1是内层函数的局部变量
         # 就近原则
-        nonlocal num1  # 修改外层函数的num1变量，不把他变成全局变量global
+        nonlocal num1  # 修改外层函数的num1变量，不把他变成全局变量global，从而改变num1的值
         num1 = 1000
         # 内层函数引用了外层函数的变量
         print("num1在内层的值为：",num1)
