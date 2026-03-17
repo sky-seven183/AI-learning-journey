@@ -36,3 +36,15 @@ print ("圆的面积为：",pai*r**2)
 high = float(input("请输入体重（kg）："))
 weight = float(input("请输入身高（m）："))
 print("您的身体质量指标BMI为：",high/weight**2)
+
+
+
+# 常见运算
+# abs(x)  绝对值
+# int(x)  强制转换成整数
+# float(x)  强制转换成浮点数
+# complex(re,im)  强制转换成复数
+# c.conjugate     获取复数的共轭
+# divmod(x,y)     返回商和余数的元组
+# pow(x,y)        x的y次方
+# x**y             x的y次方
