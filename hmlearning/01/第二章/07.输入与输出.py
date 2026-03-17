@@ -1,6 +1,6 @@
 #输入 input  s = input(提示信息)  （键盘录入数据为字符串类型）
 #输出 print  print(数据)
-
+#在字符串中插入变量的方法  使用f-string：f"字符串{变量}字符串"
 
 name = input("请输入你的名字：")
 age =input("请输入你的年龄：")
