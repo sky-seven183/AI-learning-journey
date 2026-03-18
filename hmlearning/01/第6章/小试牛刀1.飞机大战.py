@@ -18,48 +18,67 @@ print(background[2])
 def on_press(key):
 
     if key == KeyCode.from_char('w'):
+        moved = False
         for i in range(0,3):
             for j in range(0,3):
                 if  background[i][j] == 'x' and i > 0:
                     background[i][j] = '0'
                     background[i-1][j] = 'x'
+                    moved = True
                     break
-            else:
-                continue
-            break
+            if moved:
+                break
+
+            # else:
+            #     continue
+            # break
 
     elif key == KeyCode.from_char('a'):
+        moved = False
         for i in range(0, 3):
             for j in range(0, 3):
                 if background[i][j] == 'x' and j > 0:
                     background[i][j] = '0'
                     background[i ][j-1] = 'x'
+                    moved = True
                     break
-            else:
-                continue
-            break
+            if moved:
+                break
+            # else:
+            #     continue
+            # break
+
     elif key == KeyCode.from_char('s'):
+        moved = False
         for i in range(0, 3):
             for j in range(0, 3):
                 if background[i][j] == 'x' and i < 2:
                     background[i][j] = '0'
                     background[i + 1][j] = 'x'
+                    moved = True
                     break
-            else:
-                continue
-            break
+            if moved:
+                 break
+            # else:
+            #     continue
+            # break
 
 
     elif key == KeyCode.from_char('d'):
+        moved = False
         for i in range(0, 3):
             for j in range(0, 3):
                 if background[i][j] == 'x' and j < 2:
                     background[i][j] = '0'
                     background[i][j + 1] = 'x'
+                    moved = True
                     break
-            else:
-                continue
-            break
+            if moved:
+                break
+
+            # else:
+            #     continue
+            # break
 
     print()
     print(background[0])
