@@ -128,3 +128,42 @@ for循环实现推导式   列表 字典 元组 集合
 
 
 # 嵌套超过3层就应考虑开发需求层面拆分，避免3层以上
+
+
+
+"""
+遍历中修改列表导致误操作
+数据遗漏
+list1 = ['a','b','c','d']
+
+for i in range(len(list1)):
+    list1.pop(i)
+
+列表在执行pop()之后，长度会减少，因此不能使用固定长度的for 循环遍历
+"""
+
+
+"""
+交互式：
+    input
+非交互式：
+    命令行/文件,自动处理
+    
+    
+
+"""
+
+"""
+实现参数处理的两个函数库
+argparse--用户友好的命令行选项解析器
+getopt--C风格命令行选项解析器
+
+编写命令行参数的一般逻辑
+import argparse
+parser = argparse.ArgumentParser(description = "这个程序的用途")
+parser.add_argument(要添加的参数和参数描述)  可以强制转换参数类型和设置默认值 
+args = parser.parse_args()
+
+*args 用于接收参数并进行处理
+*执行方式  python3 文件名.py 参数
+"""
